@@ -1,0 +1,92 @@
+.advice-card_container {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayis-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--dark-blue);
+    &_card {
+        max-width: 550px;
+        background-color: var(--dark-grayish-blue);
+        padding: 30px;
+        border-radius: 10px;
+        @media(max-width: 550px) {
+            max-width: 90%;
+        }
+        &_advice-title {
+            font-size: 14px;
+            color: var(--neon-green);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            @media(max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+        &_advice {
+            margin-bottom: 0;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--light-cyan);
+            width: 100%;
+            margin: 20px auto 10px;
+            @media(max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+        &_advice-border-desktop {
+            margin: 20px auto;
+            width: 100%;
+            display: block;
+            @media(max-width: 550px) {
+                display: none;
+            }
+        }
+        &_advice-border-mobile {
+            margin: 20px auto;
+            width: 100%;
+            display: none;
+            @media(max-width: 550px) {
+                display: block;
+            }
+        }
+    }
+    &_generate-advice-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(150, 100%, 70%);
+        border: none;
+        position: absolute;
+        top: calc(100% - 30px);
+        cursor: pointer;
+        img {
+            width: 40%
+        }
+        &:hover {
+            background-color: var(--neon-green);
+            box-shadow: 0px 0px 15px var(--neon-green);
+        }
+        &:disabled {
+            box-shadow: none;
+            opacity: .8;
+        }
+
+    }
+    .loader-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
