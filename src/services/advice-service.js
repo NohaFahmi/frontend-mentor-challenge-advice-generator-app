@@ -2,7 +2,7 @@ const adviceService = () => {
     return {
         getRandomAdvice: async() => {
             return new Promise(async (resolve, reject) => {
-                await fetch('https://api.adviceslip.com/advice').then(async (response)=> {
+                await fetch('https://api.adviceslip.com/advice', {cache: 'no-store'}).then(async (response)=> {
                     response.json().then((advice) => {
                         resolve(advice)
                     })

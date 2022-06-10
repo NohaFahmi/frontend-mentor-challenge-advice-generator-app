@@ -21,8 +21,8 @@ const AdviceCard = ({advice, onGenerateRandomAdvice, isLoading}) => {
               />
                 </div>
                 }
-                <img className='advice-card_container_card_advice-border-desktop' src={process.env.PUBLIC_URL + '/images/pattern-divider-desktop.svg'}/>
-                <img className='advice-card_container_card_advice-border-mobile' src={process.env.PUBLIC_URL + '/images/pattern-divider-mobile.svg'}/>
+                <img alt='' className='advice-card_container_card_advice-border-desktop' src={process.env.PUBLIC_URL + '/images/pattern-divider-desktop.svg'}/>
+                <img alt='' className='advice-card_container_card_advice-border-mobile' src={process.env.PUBLIC_URL + '/images/pattern-divider-mobile.svg'}/>
             </div>
             <button className="advice-card_container_generate-advice-btn" onClick={onGenerateRandomAdvice} disabled={isLoading}>
                 <img src={process.env.PUBLIC_URL + '/images/icon-dice.svg'} alt='generate-advice-icon'/>
